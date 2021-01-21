@@ -3,13 +3,17 @@ const express = require('express');
 // Require tenorjs near the top of the file
 const Tenor = require('tenorjs').client({
   // Replace with your own key
-  Key: 'TENOR_API_KEY', // https://tenor.com/developer/keyregistration
+  Key: 'Q4E7ISA3IQIT', // https://tenor.com/developer/keyregistration
   Filter: 'high', // "off", "low", "medium", "high", not case sensitive
   Locale: 'en_US', // Your locale here, case-sensitivity depends on input
 });
 
+
+
 // App Setup
 const app = express();
+
+app.use(express.static('public'));
 
 // Middleware
 const exphbs = require('express-handlebars');
